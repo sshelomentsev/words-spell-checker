@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WordsSpellCheckerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WordsSpellCheckerApplication.class, args);
+		final Class<?>[] runner = new Class<?>[] { TestRunner.class };
+		System.exit(SpringApplication.exit(SpringApplication.run(runner, args)));
 	}
 }
